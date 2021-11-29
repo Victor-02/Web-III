@@ -1,0 +1,8 @@
+body{
+    padding-top: 80px;
+}
+ 
+.card{
+    box-shadow: 3px 6px 8px 3px rgba(100, 100, 100, 0.3);
+    background-color:#D2B48C;
+}
