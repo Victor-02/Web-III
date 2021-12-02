@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/publico/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/publico/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="/publico/js/responsive-navbar.js"></script>   
+    <title>Contato</title>
+</head>
+<body>
+    
+    <header>
+        <nav class="fixed-top">
+            
+            <a class="logo" href="/home">Negritude em Debate</a>
+
+            <div class="responsive-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <ul class="nav-list">
+                <li><a href="/Cadastro">Cadastro</a></li>
+                <li><a href="/Projetos">Projetos</a></li>
+                <li><a href="/Equipe">Equipe</a></li>
+                <li><a href="/Contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <br>
+
+    <h1>Contato</h1>
+    <form action="" method="POST" class="form">
+      <label for="name">Nome</label>
+      <input type="text" name="name" id="name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="msg">Menssagem</label>
+      <textarea name="msg" id="msg"></textarea>
+
+      <button type="submit" id="button">Enviar</button>
+
+
+    </form>
+
+    <style>
+        body{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        h1, h2{
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 2rem;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .form label,
+        .form input,
+        .form textarea,
+        .form button{
+            display: block;
+            width: 100%;
+        }
+
+        .form{
+            width: 100%;
+            max-width: 32rem;
+            font-size: 1.1rem;
+        }
+
+        .form label{
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .form input,
+        .form textarea{
+            font: inherit;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            transition: border-color, box-shadow 0.2s;
+        }
+
+        .form textarea{
+            min-height: 13rem;
+            resize: vertical;
+        }
+
+        .form button{
+            display: block;
+            padding: 1rem;
+            background-image: linear-gradient(to right, rgb(41, 19, 3), rgb(131, 58, 6));
+            color: white;
+            font: inherit;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .form input:hover,
+        .form input:focus,
+        .form textarea:hover,
+        .form textarea:hover{
+            border-color: rgb(43, 28, 2);
+        }
+
+        .form button:hover,
+        .form button:focus{
+            outline: none;
+            background-image: linear-gradient(to right, rgb(14, 6, 1), rgb(90, 39, 3));
+        }
+
+    </style>
+</body>
+</html>

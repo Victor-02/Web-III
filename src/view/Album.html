@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/publico/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/src/publico/css/style.css">
+    <link rel="stylesheet" href="/publico/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/publico/css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <title>Album Digital</title>
@@ -15,13 +15,39 @@
 
 <body>
 
+        <!-- NAVBAR -->
+    <div class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+           <div class="container">
+              <a href="/home" class="navbar-brand d-flex align-items-center" >
+                 <img src="/publico/img/Logo_vermelho.PNG" width="60" height="50"></img>
+                 <strong>Negritude em Debate</strong>
+              </a>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                       <a class="nav-link" href="/cadastro">Cadastro</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="/equipe">Equipe</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="/Contato">Contato</a>
+                    </li>
+                 </ul>
+              </div>
+           </div>
+        </nav>
+     </div>
+     <br>
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <form class="row g-6" id="form" method="POST" action="album-digital">
-                    <div class="card">
+                    <div class="cad">
                         <div class="card-body">
-                            <h2 class="text-center">Cadastro</h2>
+                            <h2 class="text-center"><b>Cadastro</b></h2>
                             <div class="form-group">
                                 <label class="form-label">Nome:</label>
                                 <input class="form-control" type="text" name="nome" id="nome" maxlength="50"
@@ -96,7 +122,10 @@
                                     placeholder="Digite sua cidade">
                             </div>
 
+                            <br>
+
                             <div class="alert alert-danger d-none">
+                                
                                 Preencha o Campo <span id="campo-erro"></span> Corretamente
                             </div>
 
@@ -104,26 +133,26 @@
                     </div>
             </div>
             <div class="col-6">
-                <div class="card">
+                <div class="cad">
                     <div class="card-body">
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="objetivos" class="form-label">Objetivos</label>
                                 <textarea class="form-control" readonly type="text" name="objetivo" id="objetivo">
-    O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no Mato Grosso do Sul, historicamente apagados e fora dos padrões estéticos eurocêntricos.<br>
-Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de diminuir o arranjo da desigualdade existente no país.<br>
-Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a intenção de contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura Afro-brasileira nas escolas.
+                                        O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no Mato Grosso do Sul, historicamente apagados e fora dos padrões estéticos eurocêntricos.<br>
+                                    Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de diminuir o arranjo da desigualdade existente no país.<br>
+                                    Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a intenção de contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura Afro-brasileira nas escolas.
                                 </textarea>
 
                                 <label for="regras" class="form-label">Regras</label>
                                 <textarea class="form-control" readonly type="text" name="regras" id="regras">
-    •	Cada pessoa poderá participar com uma fotografia
-    •	A fotografia deve ser no formato digital JPG/JPEG
-    •	A fotografia poderá ser colorida ou preta e branco
-    •	A técnica para criação é livre mas precisa seguir o tema Beleza Negra Resiste
-    •	Cada pessoa só poderá ser premiada uma única vez
-    •	As fotografias serão selecionadas por um júri composto de pessoas pretas, que julgará a beleza negra a partir dos elementos que permitirão evidenciar as conexões com as raízes negras, com a ancestralidade negra, com a diáspora negra, com as pequenas Áfricas que existem em cada pessoa negra que vive em Mato Grosso do Sul
-    •	Toda fotografia deve ser encaminhada com a autorização de uso de imagem. A UFMS e o IFMS reservam para si, desde já, o direito incontestável de reproduzir as fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando os devidos créditos ao fotógrafo.                           
+                                    •	Cada pessoa poderá participar com uma fotografia
+                                    •	A fotografia deve ser no formato digital JPG/JPEG
+                                    •	A fotografia poderá ser colorida ou preta e branco
+                                    •	A técnica para criação é livre mas precisa seguir o tema Beleza Negra Resiste
+                                    •	Cada pessoa só poderá ser premiada uma única vez
+                                    •	As fotografias serão selecionadas por um júri composto de pessoas pretas, que julgará a beleza negra a partir dos elementos que permitirão evidenciar as conexões com as raízes negras, com a ancestralidade negra, com a diáspora negra, com as pequenas Áfricas que existem em cada pessoa negra que vive em Mato Grosso do Sul
+                                    •	Toda fotografia deve ser encaminhada com a autorização de uso de imagem. A UFMS e o IFMS reservam para si, desde já, o direito incontestável de reproduzir as fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando os devidos créditos ao fotógrafo.                           
                                 </textarea>
 
                                 <div class="form-group">
@@ -139,20 +168,20 @@ Para isso, a partir das fotografias selecionadas para a mostra fotográfica, ir�
                                     <input class="form-control" type="file" name="img" class="file" accept="image/*">
                                 </div>
 
-                                <label for="autorizacao" class="form-label">Autorização</label>
+                                <label for="autorizacao" class="form-label">Autorização </label>
                                 <textarea class="form-control" readonly type="text" name="autorizacao" id="autorizacao">
-    Autorizo a Universidade Federal do Mato Grosso do Sul e o Instituto Federal do Mato Grosso do Sul, bem como a/o fotógrafa/o a utilizarem a minha imagem para fins de participação na mostra fotográfica "Beleza Negra Resiste". Poderão utilizá-la na divulgação de materiais impressos, audiovisuais e eletrônicos, sem fins lucrativos e também poderá ser utilizada por tempo indeterminado. Fica assim autorizada, de livre e espontânea vontade, para os mesmos fins a cessão de direitos de veiculação, não recebendo para tanto qualquer tipo de remuneração. 
-Por meio desta autorização, eu libero a UFMS e o IFMS, acima citados, seus representantes legais ou fornecedores, de futuros processos e queixas por violação de privacidade ou de direito de propriedade que eu poderia ter em relação a tal produção.  
-Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com as regras e autorização dispostas nesta página. 
+                                Autorizo a Universidade Federal do Mato Grosso do Sul e o Instituto Federal do Mato Grosso do Sul, bem como a/o fotógrafa/o a utilizarem a minha imagem para fins de participação na mostra fotográfica "Beleza Negra Resiste". Poderão utilizá-la na divulgação de materiais impressos, audiovisuais e eletrônicos, sem fins lucrativos e também poderá ser utilizada por tempo indeterminado. Fica assim autorizada, de livre e espontânea vontade, para os mesmos fins a cessão de direitos de veiculação, não recebendo para tanto qualquer tipo de remuneração. 
+                                Por meio desta autorização, eu libero a UFMS e o IFMS, acima citados, seus representantes legais ou fornecedores, de futuros processos e queixas por violação de privacidade ou de direito de propriedade que eu poderia ter em relação a tal produção.  
+                                Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com as regras e autorização dispostas nesta página. 
                                 </textarea>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="checkbox">
+                                <div class="form-check" style="padding-top: 12px; padding-bottom: 12px;">
+                                    <input class="form-check-input" type="checkbox" id="checkbox" name="checkbox" required>
                                     <label class="form-check-label">
                                         Lí o termo e autorizo o uso da minha imagem
-                                    </label>
+                                    </label>  
                                 </div>
                                 <div class="form-group text-center">
-                                    <button type="submit" class="btn btn-dark" name="button" id="button">Enviar</button>
+                                    <button type="submit" class="btn btn-dark" name="button" id="submit">Enviar</button>
                                 </div>
                             </div>
                         </div>
@@ -167,63 +196,16 @@ Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com a
         $('#form').submit(function () {
             var nome = $('#nome');
             var email = $('#email');
+            var data = $('#data');
+            var cpf = $('#cpf');
+            var titulo = $('#titulo');
+            var nomef = $('#nomef')
             var erro = $('.alert');
             var campo = $('#campo-erro');
             var checkbox = $('#checkbox');
-            var data = $('#data')
-
+    
             erro.addClass('d-none');
             $('is-invalid').removeClass('is-invalid');
-
-            if (nome.val() == '') {
-                erro.removeClass('d-none');
-                campo.html('Nome');
-                nome.focus();
-                nome.addClass('is-invalid');
-                return false;
-            }
-
-            if (email.val() == '') {
-                erro.removeClass('d-none');
-                campo.html('Nome');
-                email.focus();
-                email.addClass('is-invalid');
-                return false;
-            }
-
-            if (data.val() == '') {
-                erro.removeClass('d-none');
-                campo.html('Data de Nascimento');
-                nome.focus();
-                nome.addClass('is-invalid');
-                return false;
-            }
-
-            if (titulo.val() == '') {
-                erro.removeClass('d-none');
-                campo.html('Titulo da Foto');
-                nome.focus();
-                nome.addClass('is-invalid');
-                return false;
-            }
-
-            if (nomef.val() == '') {
-                erro.removeClass('d-none');
-                campo.html('Nome do(a) Fotógrado(a)');
-                nome.focus();
-                nome.addClass('is-invalid');
-                return false;
-            }
-
-            if (checkbox.checked) {
-                return true;
-            } else {
-                erro.removeClass('d-none');
-                campo.html('Autorização');
-                nome.focus();
-                nome.addClass('is-invalid');
-                return false;
-            }
 
             function getIdade(data) {
                 var hoje = new Date();
@@ -237,22 +219,70 @@ Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com a
                 return ano;
             }
 
-            if (ano.val() < 18) {
-                if (nome_resp.val() == '') {
-                    erro.removeClass('d-none');
-                    campo.html('Nome do Responsável');
-                    nome.focus();
-                    nome.addClass('is-invalid');
-                    return false;
-                }
-                if (cpf_resp.val() == '') {
-                    erro.removeClass('d-none');
-                    campo.html('CPF do Responsável');
-                    nome.focus();
-                    nome.addClass('is-invalid');
-                    return false;
-                }
+            if (nome.val() == '') {
+                erro.removeClass('d-none');
+                campo.html('Nome');
+                nome.focus();
+                nome.addClass('is-invalid');
+                return false;
             }
+
+            if (email.val() == '') {
+                erro.removeClass('d-none');
+                campo.html('Email');
+                email.focus();
+                email.addClass('is-invalid');
+                return false;
+            }
+
+            if (cpf.val() == '') {
+                erro.removeClass('d-none');
+                campo.html('CPF');
+                cpf.focus();
+                cpf.addClass('is-invalid');
+                return false;
+            }
+
+            if (data.val() == '') {
+                erro.removeClass('d-none');
+                campo.html('Data de Nascimento');
+                data.focus();
+                data.addClass('is-invalid');
+                return false;
+            }
+            
+            if (titulo.val() == '') {
+                erro.removeClass('d-none');
+                campo.html('Titulo da Foto');
+                titulo.focus();
+                titulo.addClass('is-invalid');
+                return false;
+            }
+
+            if (nomef.val() == '') {
+                erro.removeClass('d-none');
+                campo.html('Nome do(a) Fotógrado(a)');
+                nomef.focus();
+                nomef.addClass('is-invalid');
+                return false;
+            }
+
+            // if (ano.val() < 18) {
+            //     if (nome_resp.val() == '') {
+            //         erro.removeClass('d-none');
+            //         campo.html('Nome do Responsável');
+            //         nome.focus();
+            //         nome.addClass('is-invalid');
+            //         return false;
+            //     }
+            //     if (cpf_resp.val() == '') {
+            //         erro.removeClass('d-none');
+            //         campo.html('CPF do Responsável');
+            //         nome.focus();
+            //         nome.addClass('is-invalid');
+            //         return false;
+            //     }
+            // }
         });
 
     </script>
