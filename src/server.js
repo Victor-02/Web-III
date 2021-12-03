@@ -13,7 +13,10 @@ app.listen(PORTA, function(){
     console.log('Tudo Certo');
 });
 
-const pool = require('./publico/dao/conexao.js');
+// const pool = require('./publico/dao/conexao.js');
+
+// const routes = require('api/routes');
+// routes(app);
 
 app.use('/publico', express.static(__dirname + '/publico'));
 
@@ -37,20 +40,24 @@ app.get('/equipe', function(req, resp){
     resp.sendFile(__dirname + '/view/Equipe.html');
 });
 
-app.post('/home', function(req, resp){
-    console.log(`
-        req.body.nome = ${req.body.nome}
-        req.body.email = ${req.body.email}
-        req.body.cpf = ${req.body.cpf} 
-        req.body.telefone = ${req.body.telefone}
-        req.body.data = ${req.body.data}
-        req.body.cpf_resp = ${req.body.cpf_resp}
-        req.body.nome_resp = ${req.body.nome_resp}
-        req.body.estado = ${req.body.estado}
-        req.body.cidade = ${req.body.cidade}
-        req.body.titulo = ${req.body.titulo}
-        req.body.nome_fotografo = ${req.body.nomef}
-        `);
+app.get('/login', function(req, resp){
+    resp.sendFile(__dirname + '/view/login.html');
+});
+
+// app.post('/home', function(req, resp){
+//     console.log(`
+//         req.body.nome = ${req.body.nome}
+//         req.body.email = ${req.body.email}
+//         req.body.cpf = ${req.body.cpf} 
+//         req.body.telefone = ${req.body.telefone}
+//         req.body.data = ${req.body.data}
+//         req.body.cpf_resp = ${req.body.cpf_resp}
+//         req.body.nome_resp = ${req.body.nome_resp}
+//         req.body.estado = ${req.body.estado}
+//         req.body.cidade = ${req.body.cidade}
+//         req.body.titulo = ${req.body.titulo}
+//         req.body.nome_fotografo = ${req.body.nomef}
+//         `);
 
     // pool.query(`INSERT INTO Albums (nome,email,cpf,telefone,data_nascimento, cpf_resp, nome_resp, estado, cidade, titulo_foto, nome_fotografo)
     //             Values
@@ -70,5 +77,5 @@ app.post('/home', function(req, resp){
     // .then(res=> console.log('Certo'))
     // .catch(err => console.log('Erro: ' + err));
 
-    resp.sendFile(__dirname + '/view/album.html');
-});
+    //resp.sendFile(__dirname + '/view/album.html');
+
