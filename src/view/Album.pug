@@ -1,0 +1,144 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    <link href="/publico/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bscss/bootstrap.min.css">
+    <script src="/bsjs/bootstrap.min.js"></script>
+    <script src="/popperjs/popper.min.js"></script>
+    <script src="/publico/js/album.js"></script>
+    script(src="https://code.jquery.com/jquery-3.6.0.js")
+    //- link(rel='script' href='')
+    title Album Digital
+// NAVBAR
+.fixed-top
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container
+      a.navbar-brand.d-flex.align-items-center(href='/home')
+        img(src='/publico/img/Logo_vermelho.PNG' width='60' height='50')
+        strong Negritude em Debate
+      .collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='/projetos') Projetos
+          li.nav-item
+            a.nav-link(href='/equipe') Equipe
+          li.nav-item
+            a.nav-link(href='/Contato') Contato
+          li.nav-item.active
+            a.nav-link(href='/cadastro') Cadastro
+      .collapse.navbar-collapse
+        ul.navbar-nav.align-items-left
+          li.nav-item.active
+            a.nav-link(href='/login') Entrar
+br
+.container
+    .row
+        .col-6
+            form#form.row.g-6(action='/dados' method='POST') 
+                .cad
+                    .card-body
+                        h2.text-center
+                            b Cadastro
+                        .form-group
+                            label.form-label Nome:
+                            input#nome.form-control(type='text' name='nome' maxlength='50' placeholder='Digite o seu nome')
+                        .form-group
+                            label.form-label Email:
+                            input#email.form-control(type='email' name='email' placeholder='Digite o seu email')
+                        .form-group
+                            label.form-label CPF:
+                            input#cpf.form-control(type='number' name='cpf' maxlength='13' placeholder='Digite seu CPF')
+                        .form-group
+                            label.form-label Telefone:
+                            input#telefone.form-control(type='number' name='telefone' placeholder='XX XXXXX-XXXX')
+                        .form-group
+                            label.form-label Data de Nascimento:
+                            input#data.form-control(type='date' name='data' placeholder='Digite sua data de nascimento')
+                        .form-group
+                            label.form-label Nome do Respons&aacute;vel (caso necessite):
+                            input#nome_resp.form-control(type='text' name='nome_resp' placeholder='Digite o Nome do Responsável')
+                        .form-group
+                            label.form-label CPF do Respons&aacute;vel (caso necessite):
+                            input#cpf_resp.form-control(type='text' name='cpf_resp' placeholder='Digite o CPF do Responsável')
+                        .form-group
+                            label.form-label Estado:
+                            select#estado.form-control(name='estado')
+                                option(value='estado') Selecione o Estado                               
+                                  //<option value="ac">Acre</option>
+                                    <option value="al">Alagoas</option>
+                                    <option value="am">Amazonas</option>
+                                    <option value="ap">Amapá</option>
+                                    <option value="ba">Bahia</option>
+                                    <option value="ce">Ceará</option>
+                                    <option value="df">Distrito Federal</option>
+                                    <option value="es">Espírito Santo</option>
+                                    <option value="go">Goiás</option>
+                                    <option value="ma">Maranhão</option>
+                                    <option value="mt">Mato Grosso</option>
+                                option(value='ms') Mato Grosso do Sul                         
+                                  //<option value="mg">Minas Gerais</option>
+                                    <option value="pa">Pará</option>
+                                    <option value="pb">Paraíba</option>
+                                    <option value="pr">Paraná</option>
+                                    <option value="pe">Pernambuco</option>
+                                    <option value="pi">Piauí</option>
+                                    <option value="rj">Rio de Janeiro</option>
+                                    <option value="rn">Rio Grande do Norte</option>
+                                    <option value="ro">Rondônia</option>
+                                    <option value="rs">Rio Grande do Sul</option>
+                                    <option value="rr">Roraima</option>
+                                    <option value="sc">Santa Catarina</option>
+                                    <option value="se">Sergipe</option>
+                                    <option value="sp">São Paulo</option>
+                                    <option value="to">Tocantins</option>
+                        .form-group
+                            label.form-label Cidade:
+                            input#cidade.form-control(type='text' name='cidade' placeholder='Digite sua cidade')
+                        br
+                        .alert.alert-danger.d-none
+                            | Preencha o Campo 
+                            span#campo-erro
+                            |  Corretamente
+        .col-6
+            .cad
+                .card-body
+                    .col-md-12
+                        .form-group
+                            label.form-label(for='objetivos') Objetivos
+                            textarea#objetivo.form-control(readonly='' type='text' name='objetivo')
+                                | O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no Mato Grosso do Sul, historicamente apagados e fora dos padr&otilde;es est&eacute;ticos euroc&ecirc;ntricos.
+                                br
+                                |                                         Oportunizar&aacute; assim, as discuss&otilde;es &eacute;tnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problem&aacute;tica da popula&ccedil;&atilde;o negra, em sala de aula, na tentativa de diminuir o arranjo da desigualdade existente no pa&iacute;s.
+                                br
+                                |                                         Para isso, a partir das fotografias selecionadas para a mostra fotogr&aacute;fica, ir&aacute; se elaborar um &aacute;lbum de fotografias que ao ser finalizado, ser&aacute; direcionado para escolas p&uacute;blicas, com a inten&ccedil;&atilde;o de contribuir com o debate da Lei 10.639/03 que determina o ensino de Hist&oacute;ria e Cultura Afro-brasileira nas escolas.
+                            label.form-label(for='regras') Regras
+                            textarea#regras.form-control(readonly='' type='text' name='regras')
+                                | &bull;&#x9;Cada pessoa poder&aacute; participar com uma fotografia
+                                | &bull;&#x9;A fotografia deve ser no formato digital JPG/JPEG
+                                | &bull;&#x9;A fotografia poder&aacute; ser colorida ou preta e branco
+                                | &bull;&#x9;A t&eacute;cnica para cria&ccedil;&atilde;o &eacute; livre mas precisa seguir o tema Beleza Negra Resiste
+                                | &bull;&#x9;Cada pessoa s&oacute; poder&aacute; ser premiada uma &uacute;nica vez
+                                | &bull;&#x9;As fotografias ser&atilde;o selecionadas por um j&uacute;ri composto de pessoas pretas, que julgar&aacute; a beleza negra a partir dos elementos que permitir&atilde;o evidenciar as conex&otilde;es com as ra&iacute;zes negras, com a ancestralidade negra, com a di&aacute;spora negra, com as pequenas &Aacute;fricas que existem em cada pessoa negra que vive em Mato Grosso do Sul
+                                | &bull;&#x9;Toda fotografia deve ser encaminhada com a autoriza&ccedil;&atilde;o de uso de imagem. A UFMS e o IFMS reservam para si, desde j&aacute;, o direito incontest&aacute;vel de reproduzir as fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando os devidos cr&eacute;ditos ao fot&oacute;grafo.
+                            .form-group
+                                label.form-label Titulo da Foto:
+                                input#titulo.form-control(type='text' name='titulo')
+                            .form-group
+                                label.form-label Nome do(a) Fot&oacute;grafo(a):
+                                input#nomef.form-control(type='text' name='nomef')
+                            .form-group
+                                label.form-label Envie a Foto
+                                input.form-control(type='file' name='img' accept='image/*')
+                            label.form-label(for='autorizacao') Autoriza&ccedil;&atilde;o 
+                            textarea#autorizacao.form-control(readonly='' type='text' name='autorizacao')
+                                | Autorizo a Universidade Federal do Mato Grosso do Sul e o Instituto Federal do Mato Grosso do Sul, bem como a/o fot&oacute;grafa/o a utilizarem a minha imagem para fins de participa&ccedil;&atilde;o na mostra fotogr&aacute;fica &quot;Beleza Negra Resiste&quot;. Poder&atilde;o utiliz&aacute;-la na divulga&ccedil;&atilde;o de materiais impressos, audiovisuais e eletr&ocirc;nicos, sem fins lucrativos e tamb&eacute;m poder&aacute; ser utilizada por tempo indeterminado. Fica assim autorizada, de livre e espont&acirc;nea vontade, para os mesmos fins a cess&atilde;o de direitos de veicula&ccedil;&atilde;o, n&atilde;o recebendo para tanto qualquer tipo de remunera&ccedil;&atilde;o.
+                                | Por meio desta autoriza&ccedil;&atilde;o, eu libero a UFMS e o IFMS, acima citados, seus representantes legais ou fornecedores, de futuros processos e queixas por viola&ccedil;&atilde;o de privacidade ou de direito de propriedade que eu poderia ter em rela&ccedil;&atilde;o a tal produ&ccedil;&atilde;o.
+                                | Ao marcar o aceite da leitura do termo e autoriza&ccedil;&atilde;o da imagem, concordo com as regras e autoriza&ccedil;&atilde;o dispostas nesta p&aacute;gina.
+                            .form-check(style='padding-top: 12px; padding-bottom: 12px;')
+                                input#checkbox.form-check-input(type='checkbox' name='checkbox' required='')
+                                label.form-check-label
+                                | L&iacute; o termo e autorizo o uso da minha imagem
+                            .form-group.text-center
+                                button#submit(type='submit' name='button' form="form") Enviar

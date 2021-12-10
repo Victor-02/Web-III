@@ -1,0 +1,83 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/publico/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/publico/css/style.css')
+  script(src='https://code.jquery.com/jquery-3.6.0.js')
+  title Projetos
+// NAVBAR
+.fixed-top
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    .container
+      a.navbar-brand.d-flex.align-items-center(href='/home')
+        img(src='/publico/img/Logo_vermelho.PNG' width='60' height='50')
+        strong Negritude em Debate
+      .collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item.active
+            a.nav-link(href='/projetos') Projetos
+          li.nav-item
+            a.nav-link(href='/equipe') Equipe
+          li.nav-item
+            a.nav-link(href='/Contato') Contato
+          li.nav-item.active
+            a.nav-link(href='/cadastro') Cadastro
+      .collapse.navbar-collapse
+        ul.navbar-nav.align-items-left
+          li.nav-item.active
+            a.nav-link(href='/login') Entrar
+br
+.text-center
+  .cover-container.d-flex.h-100.p-3.flex-column.text-light
+    div(style='background-image: linear-gradient(to right, rgb(139,69,19), rgb(88, 61, 2));')
+      h3.cover-heading.display-3.font-weight-bold.h3 Mostra Fotogr&aacute;fica Beleza Negra Resiste 2020
+      iframe(width='560' height='315' src='https://www.youtube.com/embed/SBe5tBAVY_Y' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+      p.lead
+        | O projeto tem como objetivo visibilizar corporeidades outras que se apresentam fora do
+        | padr&atilde;o est&eacute;tico europeu, como a beleza, a cultura e a ancestralidade negra existentes no Mato Grosso do
+        | Sul e que foram historicamente apagadas. Permitindo com isso que esses sujeitos sociais, negras e negros,
+        | se auto identifiquem e consigam romper com as estruturas col&ocirc;nias e racistas que persistem ainda no
+        | s&eacute;culo XXI.
+.text-center
+  .cover-container.d-flex.h-100.p-3.flex-column.text-light
+    div(style='background-image: linear-gradient(to right, rgb(139,69,19), rgb(88, 61, 2));')
+      h3.cover-heading.display-3.font-weight-bold.h3 Palestras, oficinas e capacita&ccedil;&atilde;o antirracista
+      img(src='/publico/img/Igreja.JPG' width='700' height='450')
+      p.lead
+        | Como um dos direcionamentos do projeto &eacute; o di&aacute;logo com/na comunidade escolar, al&eacute;m das
+        | atividades externas &agrave; escola, como a Mostra fotogr&aacute;fica e o document&aacute;rio, nossa equipe tamb&eacute;m se
+        | disponibiliza para dialogar diretamente com alunos e/ou professores e coordenadores por meio de
+        | palestras, oficinas e capacita&ccedil;&otilde;es voltadas para educa&ccedil;&atilde;o antirracista.
+.text-center
+  .cover-container.d-flex.h-100.p-3.flex-column.text-light
+    div(style='background-image: linear-gradient(to right, rgb(139,69,19), rgb(88, 61, 2));')
+      h3.cover-heading.display-3.font-weight-bold.h3 Semana da Consci&ecirc;ncia Negra
+      img(src='/publico/img/Palestra.JPG' width='700' height='450')
+      p.lead
+        | As atividades propostas na Semana da Consci&ecirc;ncia Negra objetivam evidenciar a cultura, a
+        | hist&oacute;ria e sobretudo as tantas lutas do povo negro. O evento traz rodas de conversa, palestras, teatro,
+        | m&uacute;sica, dan&ccedil;a e principalmente, agregado a tudo isso, informa&ccedil;&atilde;o e conscientiza&ccedil;&atilde;o.
+br
+// FOOTER
+footer.text-white.bg-dark.text-center.text-lg-start
+  .container.p-3
+    .row
+      .col-lg-6.col-md-12.mb-4.mb-md-0
+        img(src='/publico/img/ufms_logo_negativo_pb_rgb.png' width='150' height='120')
+        img(src='/publico/img/neabi.png' width='180' height='120')
+        img(src='/publico/img/logo_ifms.JPEG' width='180' height='120')
+      .col-lg-3.col-md-6.mb-4.mb-md-0
+        h5.text-uppercase
+          b REDES SOCIAIS
+        ul.list-unstyled.mb-0
+          li
+            p Facebook: @negritudeemdebatems
+          li
+            p Instagram: @negritudeemdebatems
+          li
+            p Youtube: Negritude em Debate MS 
+  .text-center.p-3(style='background-color: rgba(0, 0, 0, 0.2);')
+    p.m-0.text-center.text-white 2021 - IFMS || Victor Casemiro
+| &gt;

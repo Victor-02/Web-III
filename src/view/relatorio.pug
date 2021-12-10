@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        table(border='1px' cellpadding='5px')
+            thead 
+                tr  
+                    th Nome 
+                    th E-mail 
+                    th Data de Nascimento
+                    th cpf
+                    th telefone
+                    th nome_resp
+                    th cpf_resp
+                    th estado
+                    th cidade
+                    th titulo
+                    th nome_fotografo
+            tbody 
+                each Dados in pegaDados
+                    tr 
+                        td #{Dados.nome}
+                        td #{Dados.email}                       
+                        td #{Dados.cpf}
+                        td #{Dados.telefone}
+                        td #{Dados.data_nascimento}
+                        td #{Dados.nome_resp}
+                        td #{Dados.cpf_resp}
+                        td #{Dados.estado}
+                        td #{Dados.cidade}
+                        td #{Dados.titulo}
+                        td #{Dados.nome_fotografo}
